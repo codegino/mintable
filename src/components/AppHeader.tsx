@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import SearchBar from './SearchBar';
 import Navigations from './Navigations';
+import {useMediaQueries} from '@react-hook/media-query';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -32,22 +33,36 @@ const Button = styled.button<{color: string; backgroundColor: string}>`
   box-sizing: border-box;
 `;
 
+const HamburgerMenu = styled.img`
+  width: 27px;
+  height: 24.77px;
+`;
+
 export default function AppHeader() {
+  // This an easy way to do responsive design, but I chose not to due to time constraint
+  const {matchesAll: isSmall} = useMediaQueries({
+    screen: 'screen',
+    width: '(max-width: 600px)',
+  });
+
   return (
     <HeaderContainer>
       <CompanyLogo src="assets/mint-logo.svg" alt="company logo" />
       <SearchBar />
-      <Navigations />
-      <Button color="#ffffff" backgroundColor="transparent">
-        Login
-      </Button>
-      <Button
-        color="#4805D6"
-        backgroundColor="#FFFFFF"
-        style={{fontWeight: 'bold'}}
-      >
-        Sign Up
-      </Button>
+      {isSmall ? <HamburgerMenu /> : <Navigations />}
+
+      <div>
+        <Button color="#ffffff" backgroundColor="transparent">
+          Login
+        </Button>
+        <Button
+          color="#4805D6"
+          backgroundColor="#FFFFFF"
+          style={{fontWeight: 'bold', marginLeft: '10px'}}
+        >
+          Sign Up
+        </Button>
+      </div>
     </HeaderContainer>
   );
 }

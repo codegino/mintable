@@ -21,7 +21,7 @@ const FilterSelect = styled.select`
 `;
 
 const SearchBarContainer = styled.div`
-  width: 500px;
+  width: auto;
   background-color: #ffffff;
   border-radius: 33px;
   padding: 3px;
