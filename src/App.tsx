@@ -6,6 +6,7 @@ import CategoryLinks from './components/CategoryLinks';
 import HeroSection from './components/HeroSection';
 import NotificationHeader from './components/NotificationHeader';
 import WhatIsHappening from './components/WhatIsHappening';
+import PromotedCreations from './components/PromotedCreations';
 
 function App(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ function App(): JSX.Element {
       <CategoryLinks />
       <HeroSection />
       <WhatIsHappening />
+      <PromotedCreations />
       <div>
         <Switch>
           <Route path="/about">
