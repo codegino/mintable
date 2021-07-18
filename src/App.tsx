@@ -5,6 +5,7 @@ import {Route, Switch} from 'react-router-dom';
 import CategoryLinks from './components/CategoryLinks';
 import HeroSection from './components/HeroSection';
 import NotificationHeader from './components/NotificationHeader';
+import WhatIsHappening from './components/WhatIsHappening';
 
 function App(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ function App(): JSX.Element {
       <AppHeader />
       <CategoryLinks />
       <HeroSection />
+      <WhatIsHappening />
       <div>
         <Switch>
           <Route path="/about">
