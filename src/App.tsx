@@ -4,10 +4,12 @@ import AppHeader from './components/AppHeader';
 import {Route, Switch} from 'react-router-dom';
 import CategoryLinks from './components/CategoryLinks';
 import HeroSection from './components/HeroSection';
+import NotificationHeader from './components/NotificationHeader';
 
 function App(): JSX.Element {
   return (
     <div className="App">
+      <NotificationHeader />
       <AppHeader />
       <CategoryLinks />
       <HeroSection />

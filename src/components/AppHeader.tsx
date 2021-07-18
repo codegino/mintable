@@ -51,7 +51,7 @@ export default function AppHeader() {
       <SearchBar />
       {isSmall ? <HamburgerMenu /> : <Navigations />}
 
-      <div>
+      <div style={{display: 'flex', flexDirection: 'row'}}>
         <Button color="#ffffff" backgroundColor="transparent">
           Login
         </Button>
