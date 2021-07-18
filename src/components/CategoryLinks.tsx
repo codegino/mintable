@@ -5,6 +5,8 @@ import styled from '@emotion/styled';
 
 const NavigationLinkContainer = styled.nav`
   height: 50px;
+  background-color: #ffffff;
+  padding-top: 10px;
 
   ul {
     display: flex;

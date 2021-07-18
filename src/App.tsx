@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import styled from '@emotion/styled';
 import AppHeader from './components/AppHeader';
 import {Route, Switch} from 'react-router-dom';
 import CategoryLinks from './components/CategoryLinks';
+import HeroSection from './components/HeroSection';
 
 function App(): JSX.Element {
   return (
     <div className="App">
       <AppHeader />
       <CategoryLinks />
+      <HeroSection />
       <div>
         <Switch>
           <Route path="/about">
